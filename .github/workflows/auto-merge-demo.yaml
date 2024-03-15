@@ -34,7 +34,7 @@ jobs:
         uses: microsoft/vstest-action@v1.0.0
         with:
           testAssembly: Dependabot.UnitTests.dll
-          searchFolder: Dependabot
+          searchFolder: Dependabot/Dependabot.UnitTests
           runInParallel: true
 
       - name: Enable auto-merge for Dependabot PRs
