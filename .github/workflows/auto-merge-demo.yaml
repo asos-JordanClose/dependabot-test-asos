@@ -1,0 +1,42 @@
+name: Dependabot auto-merge
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  dependabot:
+    runs-on: windows-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'Jord-anC'
+    steps:
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          
+      - uses: actions/checkout@v4
+        
+      - name: Restore dependencies
+        run: nuget restore "Dependabot/Dependabot.sln"
+        
+      - name: Build
+        id: build
+        run: msbuild "Dependabot/Dependabot.sln"
+        
+      - name: Run vstests
+        if: steps.build.outcome == 'success'
+        id: test
+        uses: microsoft/vstest-action@v1.0.0
+        with:
+          testAssembly: Dependabot.UnitTests.dll
+          searchFolder: Dependabot
+          runInParallel: true
+
+      - name: Enable auto-merge for Dependabot PRs
+        if: steps.test.outcome == 'success'
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}

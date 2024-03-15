@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependabot", "Dependabot\Dependabot.csproj", "{D07A9719-B604-4DC6-ACEA-0B80DD83822E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dependabot.UnitTests", "Dependabot.UnitTests\Dependabot.UnitTests.csproj", "{A1E614F8-211F-4062-BAFD-AB22D087BB76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D07A9719-B604-4DC6-ACEA-0B80DD83822E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07A9719-B604-4DC6-ACEA-0B80DD83822E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07A9719-B604-4DC6-ACEA-0B80DD83822E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07A9719-B604-4DC6-ACEA-0B80DD83822E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1E614F8-211F-4062-BAFD-AB22D087BB76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1E614F8-211F-4062-BAFD-AB22D087BB76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1E614F8-211F-4062-BAFD-AB22D087BB76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1E614F8-211F-4062-BAFD-AB22D087BB76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C98F534-46F7-42BB-9C6F-5D6AF864B86B}
+	EndGlobalSection
+EndGlobal
