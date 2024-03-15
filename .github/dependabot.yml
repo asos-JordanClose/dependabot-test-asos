@@ -4,6 +4,15 @@
 # https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
 
 version: 2
+registries:
+  PE-ASOS:
+    type: nuget-feed
+    url: https://pkgs.dev.azure.com/asos/_packaging/PE-ASOS/nuget/v3/index.json
+    token: ${{secrets.AZURE_NUGET_PAT}}
+  PE-ASOSPackages:
+    type: nuget-feed
+    url: https://pkgs.dev.azure.com/asos/_packaging/PE-ASOSPackages/nuget/v3/index.json
+    token: ${{secrets.AZURE_NUGET_PAT}}
 updates:
   - package-ecosystem: nuget
     directory: /Dependabot/Dependabot.UnitTests
