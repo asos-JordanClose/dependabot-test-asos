@@ -22,7 +22,6 @@ updates:
       interval: daily
     ignore:
       - dependency-name: "log4net"
-      - dependency-name: "Newtonsoft.Json"
     registries:
       - PE-ASOS
       - PE-ASOSPackages
@@ -34,7 +33,6 @@ updates:
       interval: daily
     ignore:
       - dependency-name: "log4net"
-      - dependency-name: "Newtonsoft.Json"
     registries:
       - PE-ASOS
       - PE-ASOSPackages
