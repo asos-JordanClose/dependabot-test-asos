@@ -17,6 +17,9 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           
       - uses: actions/checkout@v4
+
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
         
       - name: Restore dependencies
         run: nuget restore "Dependabot/Dependabot.sln"
