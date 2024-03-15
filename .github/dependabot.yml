@@ -23,6 +23,9 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "Newtonsoft.Json"
+    registries:
+      - PE-ASOS
+      - PE-ASOSPackages
   - package-ecosystem: nuget
     directory: /Dependabot/Dependabot
     # stop version updates and only create PRs for security updates
@@ -32,3 +35,6 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "Newtonsoft.Json"
+    registries:
+      - PE-ASOS
+      - PE-ASOSPackages
