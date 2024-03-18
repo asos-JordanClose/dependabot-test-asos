@@ -36,6 +36,9 @@ jobs:
         id: test
         run: vstest.console.exe Dependabot\Dependabot.UnitTests\bin\Debug\Dependabot.UnitTests.dll
 
+      - name: Print
+        run: echo  ${{github.event.pull_request.html_url}}
+
       - name: Enable auto-merge for Dependabot PRs
         if: steps.test.outcome == 'success'
         run: gh pr merge --auto --merge "$PR_URL"
