@@ -15,13 +15,24 @@ registries:
     token: ${{secrets.AZURE_NUGET_PAT}}
 updates:
   - package-ecosystem: nuget
-    directory: /
+    directory: /Dependabot/Dependabot
     schedule:
       interval: daily
     ignore:
       - dependency-name: "log4net"
-      # - dependency-name: "NUnit"
-      #   versions: ["4.*"]
+      - dependency-name: "NUnit"
+        versions: ["4.*"]
+    registries:
+      - PE-ASOS
+      - PE-ASOSPackages
+  - package-ecosystem: nuget
+    directory: /Dependabot/Dependabot.UnitTests
+    schedule:
+      interval: daily
+    ignore:
+      - dependency-name: "log4net"
+      - dependency-name: "NUnit"
+        versions: ["4.*"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
