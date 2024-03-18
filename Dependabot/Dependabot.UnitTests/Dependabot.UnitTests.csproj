@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Azure.Identity, Version=1.9.0.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Identity.1.9.0\lib\netstandard2.0\Azure.Identity.dll</HintPath>
+    </Reference>
     <Reference Include="CBOR, Version=4.5.3.0, Culture=neutral, PublicKeyToken=9cd62db60ea5554c">
       <HintPath>..\packages/PeterO.Cbor.4.5.3/lib/net40/CBOR.dll</HintPath>
       <Private>True</Private>
