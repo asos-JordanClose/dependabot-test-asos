@@ -21,7 +21,7 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "NUnit"
-        versions: ["3.*", "4.*"]
+        versions: ["4.*"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
