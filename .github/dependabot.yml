@@ -21,6 +21,7 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "NUnit"
+        update-types: ["version-update:semver-patch"]
         versions: ["(3.0.0,)"]
     registries:
       - PE-ASOS
@@ -32,6 +33,7 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "NUnit"
+        update-types: ["version-update:semver-patch"]
         versions: ["(3.0.0,)"]
     registries:
       - PE-ASOS
