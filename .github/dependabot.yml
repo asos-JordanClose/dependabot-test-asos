@@ -20,6 +20,8 @@ updates:
       interval: daily
     ignore:
       - dependency-name: "log4net"
+      - dependency-name: "NUnit"
+        versions: [">3.0.0"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
@@ -30,7 +32,7 @@ updates:
     ignore:
       - dependency-name: "log4net"
       - dependency-name: "NUnit"
-        versions: ["<3.0.0"]
+        versions: [">3.0.0"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
