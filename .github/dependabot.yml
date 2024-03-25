@@ -20,6 +20,8 @@ updates:
       interval: daily
     ignore:
       - dependency-name: "log4net"
+      - dependency-name: "Serenity.Net.Core"
+        versions: ["6.5.*", "6.6.*", "6.7.*", "7.*", "8.*"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
@@ -29,8 +31,6 @@ updates:
       interval: daily
     ignore:
       - dependency-name: "log4net"
-      - dependency-name: "NUnit"
-        versions: ["3.*", "4.*"]
     registries:
       - PE-ASOS
       - PE-ASOSPackages
